@@ -29,10 +29,10 @@
   },
   "homepage": "https://github.com/automation-stack/node-machine-id#readme",
   "scripts": {
-    "build": "WEBPACK=node_modules/webpack/bin/webpack.js && $WEBPACK --config webpack.config.babel.js",
+    "build": "npx webpack --config webpack.config.babel.js",
     "prepublish": "npm run test",
-    "lint": "node_modules/eslint/bin/eslint.js -c .eslintrc ./src",
-    "test": "node_modules/mocha/bin/mocha --compilers js:babel-core/register ./tests"
+    "lint": "npx eslint -c .eslintrc ./src",
+    "test": "npx mocha --require babel-core/register ./tests"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
